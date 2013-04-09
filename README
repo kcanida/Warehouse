@@ -1,4 +1,41 @@
-This is your new Play 2.1 application
+This is your new Warehouse project!
 =====================================
 
-This file will be packaged with your application, when using `play dist`.
+The Warehouse project is a Play application configured for use with Eclipse.  
+
+## Installing Play
+In order to setup the Warehouse project you first want to install the [Play Framework](http://www.playframework.com/documentation/2.0/Installing). 
+
+## Configuring Play for Eclipse
+The developers of Play made it easy to configure any Play project for IDE's such as Eclipse. Follow the steps to [configure](http://www.playframework.com/documentation/2.1.0/IDE) a play Project for Eclipse.
+
+## Downloading the importing the Warehouse Project into Eclipse
+Download the extract the Warehouse project into your play directory. You need to then import the project into Eclipse. To import the application into yaour Eclipse workspace go to **File/Import/General/Existing Project...** and choose the Warehouse folder you downloaded as the root directory.
+
+## Enabling EBean
+In order to enable EBean for the application, we uncommented the lines below in the application.conf file.
+* db.default.driver=org.h2.Driver
+* db.default.url="jdbc:h2:mem:play"
+* db.default.user=sa
+* db.default.password=""
+* ebean.default="models.*"
+
+Under Evolutions we also added the line:
+* applyEvolutions.default=true
+
+## Running the application in Play
+In order to run the application, we need to open a terminal/command line window.  Enter the directory where you installed Play.  Next, enter the Warehouse directory where you extracted the Warehouse project. Open the play console by typing the command $play.  Next, we can run the ModelTest.java file by running the command $test.
+
+## Editing the application
+You can make changes to the entities in our application in Eclipse.  The 5 entity classes are held in the Warehouse>app>models package. Changes can also be made to out test class in ModelTest.java file in the Warehouse>app>test package. Once changes are made, you can easily run your new test class by re-running the play console and test command. To exit the current play console from the command line simply type CTRL+D. 
+
+
+## About the Warehouse data model
+A Warehouse is a facility located at a single address. Each Warehouse holds many stock items.  Each stock item is a particular type of product and more than one stock item can be associated with a type of product.  Each type of product can have many tags and a single tag can have many products.  
+
+5 Entities:
+1. Warehouse
+2. Address
+3. StockItem
+4. Product
+5. Tag
