@@ -1,11 +1,11 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import java.util.List;
+import models.Address;
 import models.Product;
 import models.StockItem;
 import models.Tag;
 import models.Warehouse;
-import models.Address;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
