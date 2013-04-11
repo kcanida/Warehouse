@@ -15,6 +15,13 @@ import static play.test.Helpers.inMemoryDatabase;
 import static play.test.Helpers.start;
 import static play.test.Helpers.stop;
 
+/**
+ * 
+ * @author Kellie Canida
+ * 
+ * Model test for the Warehouse data model.
+ *
+ */
 public class ModelTest {
   private FakeApplication application;
   
@@ -78,7 +85,6 @@ public class ModelTest {
     assertEquals("Tag-Product", tags.get(0).products.get(0), products.get(0));
     assertEquals("Warehouse-Address", warehouses.get(0).address, addresses.get(0));
     assertEquals("Address-Warehouse", addresses.get(0).warehouse, warehouses.get(0));
-    
     
     //Some code to illustrate model manipulation with ORM
     //Start in Java. Delete the tag from the (original) product instance.
