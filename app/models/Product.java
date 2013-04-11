@@ -9,6 +9,14 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import play.db.ebean.Model;
 
+/**
+ * 
+ * @author Kellie Canida
+ *
+ * A product describes the type of object. Many stock items can 
+ * belong to a product and a product can have multiple tags.
+ * 
+ */
 @Entity
 public class Product extends Model {
   private static final long serialVersionUID = 5888606313787772233L;
@@ -21,6 +29,11 @@ public class Product extends Model {
   @OneToMany(mappedBy="product",cascade=CascadeType.ALL)
   public List<StockItem> stockitems = new ArrayList<>();
   
+  /**
+   * Constructor method of a product.
+   * @param name of type of product.
+   * @param description of product.
+   */
   public Product(String name, String description) {
     this.name = name;
     this.description = description;
