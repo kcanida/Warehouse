@@ -35,6 +35,10 @@ public class Warehouse extends Model{
     this.name = name;
   }
   
+  public String getWarehouseName() {
+    return this.name;
+  }
+  
   public static Finder<Long,Warehouse> find() {
     return  new Finder<Long,Warehouse>(Long.class,Warehouse.class);
   }

@@ -39,6 +39,14 @@ public class Product extends Model {
     this.description = description;
   }
 
+  public String getProductName() {
+    return this.name;
+  }
+  
+  public String getDescription() {
+    return this.description;
+  }
+  
   public static Finder<Long, Product> find() {
     return new Finder<Long, Product>(Long.class, Product.class);
   }

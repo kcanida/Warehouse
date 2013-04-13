@@ -37,6 +37,10 @@ public class StockItem extends Model {
     this.quantity = quantity;
   }
   
+  public long getQuantity() {
+    return this.quantity;
+  }
+  
   public static Finder<Long, StockItem> find() {
     return new Finder<Long, StockItem>(Long.class,StockItem.class);
   }

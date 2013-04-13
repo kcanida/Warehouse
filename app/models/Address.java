@@ -31,6 +31,10 @@ public class Address extends Model{
     this.warehouse = warehouse;
   }
   
+  public String getAddressName() {
+    return this.name;
+  }
+  
   public static Finder<Long,Address> find() {
     return new Finder<Long,Address>(Long.class,Address.class);
   }

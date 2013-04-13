@@ -32,6 +32,10 @@ public class Tag extends Model {
     this.name = name;
   }
   
+  public String getTagName() {
+    return this.name;
+  }
+  
   public static Finder<Long, Tag> find() {
     return new Finder<Long, Tag>(Long.class, Tag.class);
   }
